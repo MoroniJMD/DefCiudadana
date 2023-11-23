@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Cambiar el idioma a español si el contenido está en español -->
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reportes Ciudadanos - Registro</title>
+<link rel="stylesheet" href="style.css"> <!-- Corregir el typo en "stylesheet" -->
+</head>
+<body background="D">
+<div class="register-container">
+  <h1>Registro de Usuario</h1> <!-- Agregar un encabezado para el formulario -->
+  <form id="register-form" action="register.php" method="post" novalidate> <!-- Agregar atributos action y method, y novalidate si deseas controlar la validación en el frontend -->
+    <div class="form-group"> <!-- Agrupar cada par de etiqueta e input para estilos y accesibilidad -->
+      <label for="new-email">E-Mail:</label>
+      <input type="email" id="new-email" name="new-email" required aria-required="true"> <!-- Agregar atributo name y mejorar accesibilidad con ARIA -->
+    </div>
+    
+    <div class="form-group">
+      <label for="new-password">Contraseña:</label>
+      <input type="password" id="new-password" name="new-password" required aria-required="true" minlength="8"> <!-- Establecer una longitud mínima para la contraseña -->
+    </div>
+
+    <div class="form-group">
+      <label for="confirm-password">Confirmar Contraseña:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required aria-required="true" minlength="8">
+    </div>
+    
+    <button type="submit" class="submit-button">Registrarse</button> <!-- Agregar clase al botón para estilos -->
+  </form>
+  <div class="login-redirect">
+
+    ¿Ya tienes usuario? <a href="login.html">Iniciar Sesión</a>
+  </div>
+</div>
+</body>
+</html>

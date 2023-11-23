@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Historial de Reportes del Usuario</title>
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+  }
+  .header {
+    background-color: #7e33b7;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  .header h1 {
+    margin: 0;
+  }
+  .content {
+    padding: 20px;
+  }
+  .report-button {
+    background-color: #2196F3;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    margin: 15px 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  .report-button:hover {
+    background-color: #1E88E5;
+  }
+  .report-card {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    transition: box-shadow 0.3s ease;
+  }
+  .report-card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  .report-card label {
+    display: block;
+    margin-top: 20px;
+    color: #333;
+  }
+  .report-card input[type="text"],
+  .report-card textarea,
+  .report-card input[type="file"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  .report-card textarea {
+    resize: vertical;
+  }
+  @media (max-width: 768px) {
+    .report-button {
+      width: 100%;
+    }
+  }
+</style>
+</head>
+<body background="../img1.jpg">
+
+<div class="header">
+  <h1>Reportes del Usuario</h1>
+</div>
+
+<div class="content">
+  <a href="../inicio/inicio.html">
+  <button class="report-button">Inicio</button>
+</a>
+  <div id="report-card">
+
+    <!-- Manejar las fotos si son necesarias -->
+  </div>
+
+  <script>
+    function cargarReportes() {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', 'historial.php', true);
+      xhr.onload = function() {
+        if (this.status === 200) {
+          document.getElementById('report-card').innerHTML = this.responseText;
+        } else {
+          // Manejar el error
+          console.error('Error al cargar los reportes');
+        }
+      };
+      xhr.send();
+    }
+
+    // Cargar los reportes al cargar la página
+    window.onload = cargarReportes;
+  </script>
+</div>
+
+</body>
+</html>

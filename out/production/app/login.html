@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reportes Ciudadanos - Inicio de Sesión</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="login-container" style="background-color: aliceblue;">
+  <form id="login-form" action="login.php" method="post">
+    <label for="email">E-Mail:</label>
+    <input type="email" id="email" name="email" required>
+    <label for="password">Contraseña:</label>
+    <input type="password" id="password" name="password" required>
+    <button type="submit">Ingresar</button>
+    <a href="inicio/inicio.html">
+      <button type="button" id="guest-entry-button">Ingresar como Invitado</button>
+    </a>
+    <p><a href="recover_password.html">Olvidaste la Contraseña?</a></p>
+  </form>
+</div>
+</body>
+</html>

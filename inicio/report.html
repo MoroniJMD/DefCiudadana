@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+  <title>Nuevo Reporte</title>
+  <link rel="stylesheet" href="styless.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="sidebar">
+    <h2>Sidebar</h2>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+    </ul>
+  </div>
+
+  <br>
+  <br><br>
+  <br><br>
+  <div class="container">
+
+    <form id="newReportForm" action="report.php" method="post" enctype="multipart/form-data">
+        <div class="logo-container">
+            <img src="DALL·E%202023-11-23%2000.06.58%20-%20Adjust%20the%20previously%20created%20logos%20for%20a%20web%20app%20focused%20on%20security%20and%20service%20reporting,%20making%20them%20in%20PNG%20format%20with%20no%20text.%20The%20logos%20should%20.png" class="logo" alt="Logo">
+        </div>
+     <br>
+      <h1>Nuevo Reporte</h1>
+      <div class="form-group">
+        <label for="location" class="titulo">Ubicación:</label>
+        <input type="text" id="location" name="location" placeholder="Introduce tu ubicación" required>
+      </div>
+      <div class="form-group">
+        <label for="description" class="titulo">Descripción:</label>
+        <textarea id="description" name="description" placeholder="Describe el incidente" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="photos" class="titulo">Fotos:</label>
+        <input type="file" id="photos" name="photos" accept="image/*" multiple>
+      </div>
+      <button type="submit">Enviar Reporte</button>
+    <a href="../../app/inicio/inicio.html">
+      <button type="button">Cancelar</button>
+    </a>
+    </form>
+  </div>
+</body>
+</html>
+
